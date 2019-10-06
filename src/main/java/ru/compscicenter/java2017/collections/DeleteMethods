@@ -1,0 +1,85 @@
+/*
+    @Override
+    public boolean addAll(Collection c) {
+        Iterator iterator = c.iterator();
+        while (iterator.hasNext()) {
+            Object temp = iterator.next();
+            if (temp == null) {
+                throw new NullPointerException();
+            }
+            add(temp, 1);
+        }
+        return true;
+    }
+*/
+
+/*
+    @Override
+    public Object[] toArray() {
+        List<Object> set = new ArrayList<>();
+        for (Object key : map.keySet()) {
+            int value = map.get(key);
+            for (int i = 0; i < value; i++) {
+                set.add(key);
+            }
+        }
+        return set.toArray();
+    }
+*/
+
+/*
+    @Override
+    public boolean retainAll(Collection c) {
+        Iterator iteratorC = c.iterator();
+        boolean retain = false;
+        ArrayList<Object> delete = new ArrayList<>();
+        while (iteratorC.hasNext()) {
+            Object o = iteratorC.next();
+            for (Object key : map.keySet()) {
+                if (!o.equals(key)) {
+                    delete.add(key);
+                    retain = true;
+                }
+            }
+        }
+        for (int i = 0; i < delete.size(); i++) {
+            map.remove(delete.get(i));
+        }
+        return retain;
+    }
+
+
+    @Override
+    public boolean removeAll(Collection c) {
+        Iterator iteratorC = c.iterator();
+        boolean remove = false;
+        ArrayList<Object> delete = new ArrayList<>();
+        while (iteratorC.hasNext()) {
+            Object o = iteratorC.next();
+            for (Object key : map.keySet()) {
+                if (o.equals(key)) {
+                    delete.add(key);
+                    remove = true;
+                }
+            }
+        }
+        for (int i = 0; i < delete.size(); i++) {
+            map.remove(delete.get(i));
+        }
+        return remove;
+    }
+
+    @Override
+    public boolean containsAll(Collection c) {
+        Iterator iteratorC = c.iterator();
+        int count = 0;
+        while (iteratorC.hasNext()) {
+            Object o = iteratorC.next();
+            for (Object key : map.keySet()) {
+                if (o.equals(key)) {
+                    count++;
+                }
+            }
+        }
+        return (count == c.size());
+    }*/
